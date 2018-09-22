@@ -1,0 +1,49 @@
+package com.github.demo01;
+
+import java.util.Scanner;
+
+public class Car {
+	private static final String NULL = null;
+	private static String carBrand = NULL;
+	private static String carTank = NULL;
+	private static double carOilsumption = 0.0;
+	static void gas(){
+		System.out.println("汽车加满油");
+	}
+	static void run(){
+		System.out.println("汽车在马路上跑");
+	}
+	public String getCarBrand() {
+		return carBrand;
+	}
+	public void setCarBrand(String carBrand) {
+		this.carBrand = carBrand;
+	}
+	public String getCarTank() {
+		return carTank;
+	}
+	public void setCarTank(String carTank) {
+		this.carTank = carTank;
+	}
+	public double getCarOilsumption() {
+		return carOilsumption;
+	}
+	public void setCarOilsumption(double carOilsumption) {
+		this.carOilsumption = carOilsumption;
+	}
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根
+			Object [] ob=new Object[3];
+			Scanner sc = new Scanner(System.in);
+			System.out.println("请输入汽车的三个属性：型号、储存汽油的油箱、油耗");
+			for(int i=0;i<ob.length;i++){
+				ob[i] = sc.next();
+			}
+			for(int i=0;i<ob.length;i++){
+				System.out.println(ob[i]);
+			}
+			Car.gas();
+			Car.run();
+	}
+
+}
